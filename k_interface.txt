@@ -1,0 +1,4 @@
+Mavzu:
+
+Interface: shartnoma. Bu o'zida funksiya asoslarini yaratadi. Va har bir klass undan foydalanganda
+undagi funksiyalarni yaratishda majbur.

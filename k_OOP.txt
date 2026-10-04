@@ -1,0 +1,7 @@
+php.net sayti orqali oopni officialni o'rganish mumkin.
+
+Inheritance:
+    OOP 4tani ustuni bor inkapsulatsiya, polimorfizm, inheritance, abstarksiya
+    Overriding - ustidan yozish. Funksiyani boshidan yozish
+    Parent va child klasslar bo'ladi
+    Vazifa. Fruit klassi yaratish undan apple, banana kabi klasslar keltirib chiqarish

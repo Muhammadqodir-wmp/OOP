@@ -1,0 +1,5 @@
+Mavzu: Abstract klass
+
+Abstract klassdan obek yaratilmaydi! Unda faqat child klass yaratish orqali foydalanish mumkin! 
+Abstract klassda Abstract funksiya yaratish mumkin. U funksiyani tanasi bo'lmaydi. 
+Va u har bir child klassda u funksiya mavjud bo'lishi kerak.
