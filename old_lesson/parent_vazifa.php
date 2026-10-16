@@ -4,6 +4,8 @@ class Product
 {
     protected string $name;
 
+    const BREED = "M";
+
     public function __construct(string $name)
     {
         $this->name = $name;
@@ -12,6 +14,10 @@ class Product
     public function getInfo(): string
     {
         return "Mahsulot: " . $this->name;
+    }
+
+    public function qaytish(){
+        return self::BREED;
     }
 }
 
@@ -27,6 +33,12 @@ class Guruch extends Product
         $this->price = $price;
     }
 
+    #[Override]
+    public function qaytish()
+    {
+        return parent::qaytish();
+    }
+
     public function getInfo(): string
     {
         return parent::getInfo() . " Guruch narxi: " . $this->price;
@@ -35,7 +47,7 @@ class Guruch extends Product
 
 $guruch = new Guruch("Lazer guruch", 18000);
 
-echo $guruch->getInfo();
+echo $guruch->qaytish();
 
 //self - joriy klass
 //parent:: ota klass
