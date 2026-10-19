@@ -1,15 +1,16 @@
 <?php 
 
-require_once "savdo/Customer.php";
-require_once "savdo/Product.php";
+require_once __DIR__  . "/autoload.php";
 
-use App\Models\Product;
-use App\Users\Customer;
+use Transport\Bus;
+use Transport\Car;
 
-$obj1 = new Product;
+$car = new Car;
 
-echo $obj1->getInfo() . "    ";
+echo $car->move();
 
-$obj2 = new Customer;
+echo "<br>";
 
-echo $obj2->getInfo();
+$bus = new Bus;
+
+echo $bus->move();
