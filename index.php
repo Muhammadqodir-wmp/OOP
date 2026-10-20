@@ -1,16 +1,24 @@
 <?php 
 
-require_once __DIR__  . "/autoload.php";
+require_once __DIR__ . "/vendor/autoload.php";
 
-use Transport\Bus;
-use Transport\Car;
+use App\Models\Product;
+use App\Models\User;
+use App\Services\Order;
 
-$car = new Car;
+$obj1 = new Product;
 
-echo $car->move();
+echo $obj1->getPrice(20000);
 
 echo "<br>";
 
-$bus = new Bus;
+$obj2 = new User;
 
-echo $bus->move();
+echo $obj2->getName("Muhammadqodir");
+
+
+echo "<br>";
+
+$obj3 = new Order;
+
+echo $obj3->createOrder();
