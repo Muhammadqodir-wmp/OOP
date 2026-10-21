@@ -6,19 +6,16 @@ use App\Models\Product;
 use App\Models\User;
 use App\Services\Order;
 
-$obj1 = new Product;
 
-echo $obj1->getPrice(20000);
+
+$obj1 =  new Product(99000, "Futbolka");
+
+$obj23 = clone $obj1;
+
+$obj23->price = 110000;
+
+echo $obj1->name . "-> Mahsulot nomi " . $obj1->price . "->mahsulot narxi";
 
 echo "<br>";
 
-$obj2 = new User;
-
-echo $obj2->getName("Muhammadqodir");
-
-
-echo "<br>";
-
-$obj3 = new Order;
-
-echo $obj3->createOrder();
+echo $obj23->name . "-> Mahsulot nomi " . $obj23->price . "->mahsulot narxi";
