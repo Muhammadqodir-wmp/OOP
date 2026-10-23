@@ -1,21 +1,37 @@
-<?php 
+<?php
 
-require_once __DIR__ . "/vendor/autoload.php";
+require_once __DIR__.  "/autoload.php";
 
-use App\Models\Product;
-use App\Models\User;
-use App\Services\Order;
+use Dokon\Product;
 
 
+$mahsulot = new Product(20000, "Guruch");
 
-$obj1 =  new Product(99000, "Futbolka");
+$yangiMahsulot = clone $mahsulot;
 
-$obj23 = clone $obj1;
+// unset($mahsulot);
 
-$obj23->price = 110000;
+$yangiMahsulot->name = "Grechka";
+$yangiMahsulot->price = 30000;
 
-echo $obj1->name . "-> Mahsulot nomi " . $obj1->price . "->mahsulot narxi";
+echo $yangiMahsulot->index;
 
-echo "<br>";
+function divide(int $a, int $b){
 
-echo $obj23->name . "-> Mahsulot nomi " . $obj23->price . "->mahsulot narxi";
+    if($b === 0){
+         throw new Exception("Nolga bo'lish mumkin emas");
+    }
+
+    return $a / $b;
+
+}
+
+try{
+    echo divide(19,0);
+
+}catch(Exception $e){
+    echo "Xatolik: " . $e->getMessage();
+}
+
+echo "<br> Dastur davom etmoqda...";
+
