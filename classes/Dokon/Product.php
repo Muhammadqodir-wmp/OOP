@@ -9,6 +9,7 @@ class Product
     public int $price;
     public string $name;
     private int $index=1000;
+    private int $foydafoizi = 71;
 
     public function __construct(int $price, string $name)
     {   
@@ -26,7 +27,20 @@ class Product
             return $this->index;
         }
 
+        if($property==="foydafoizi"){
+            return $this->foydafoizi;
+        }
+
         throw new Exception("Bunday $property mavjud emas");
+    }
+
+    public function __set(string $property, mixed $value){
+        if($property ==="index"){
+            $this->index = $value;
+        }
+        if($property==="foydafoizi"){
+            $this->foydafoizi = $value;
+        }
     }
 
 
